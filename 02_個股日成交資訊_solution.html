@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; niki&#39;s home</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="爬蟲解析，使用 Regular Expression" href="0_%E7%88%AC%E8%9F%B2_%E6%8A%93%E5%9C%96%E7%89%87.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">niki's home</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="0_%E7%88%AC%E8%9F%B2_%E6%8A%93%E5%9C%96%E7%89%87.html">
+   爬蟲解析，使用 Regular Expression
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/02_個股日成交資訊_solution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_個股日成交資訊_solution.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/02_個股日成交資訊_solution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 引進相關套件</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 資料日期</span>
+<span class="n">date1</span> <span class="o">=</span> <span class="s1">&#39;20210720&#39;</span>
+<span class="n">stockNo</span> <span class="o">=</span> <span class="s1">&#39;2330&#39;</span>
+<span class="c1"># 網址</span>
+<span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=csv&amp;date=20210701&amp;stockNo=2327&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date1</span><span class="p">,</span> <span class="n">stockNo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 送出要求，並取得回應資料</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_data</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="n">fields</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&quot;,&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;=&#39;</span><span class="p">:</span>
+        <span class="n">clean_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+<span class="n">csv_data</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">csv_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;日期&quot;,&quot;成交股數&quot;,&quot;成交金額&quot;,&quot;開盤價&quot;,&quot;最高價&quot;,&quot;最低價&quot;,&quot;收盤價&quot;,&quot;漲跌價差&quot;,&quot;成交筆數&quot;,
+&quot;110/07/01&quot;,&quot;11,013,703&quot;,&quot;6,229,682,016&quot;,&quot;573.00&quot;,&quot;578.00&quot;,&quot;556.00&quot;,&quot;557.00&quot;,&quot;X0.00&quot;,&quot;11,146&quot;,
+&quot;110/07/02&quot;,&quot;4,274,819&quot;,&quot;2,367,941,193&quot;,&quot;560.00&quot;,&quot;561.00&quot;,&quot;545.00&quot;,&quot;556.00&quot;,&quot;-1.00&quot;,&quot;4,900&quot;,
+&quot;110/07/05&quot;,&quot;7,649,064&quot;,&quot;4,363,602,007&quot;,&quot;567.00&quot;,&quot;575.00&quot;,&quot;564.00&quot;,&quot;571.00&quot;,&quot;+15.00&quot;,&quot;7,904&quot;,
+&quot;110/07/06&quot;,&quot;13,287,003&quot;,&quot;7,821,063,948&quot;,&quot;579.00&quot;,&quot;599.00&quot;,&quot;578.00&quot;,&quot;597.00&quot;,&quot;+26.00&quot;,&quot;14,566&quot;,
+&quot;110/07/07&quot;,&quot;13,783,192&quot;,&quot;8,347,286,316&quot;,&quot;597.00&quot;,&quot;615.00&quot;,&quot;594.00&quot;,&quot;603.00&quot;,&quot;+6.00&quot;,&quot;14,684&quot;,
+&quot;110/07/08&quot;,&quot;7,808,490&quot;,&quot;4,666,094,807&quot;,&quot;605.00&quot;,&quot;610.00&quot;,&quot;588.00&quot;,&quot;590.00&quot;,&quot;-13.00&quot;,&quot;8,813&quot;,
+&quot;110/07/09&quot;,&quot;4,900,184&quot;,&quot;2,875,463,914&quot;,&quot;583.00&quot;,&quot;595.00&quot;,&quot;581.00&quot;,&quot;584.00&quot;,&quot;-6.00&quot;,&quot;5,942&quot;,
+&quot;110/07/12&quot;,&quot;3,816,112&quot;,&quot;2,249,709,841&quot;,&quot;594.00&quot;,&quot;596.00&quot;,&quot;585.00&quot;,&quot;586.00&quot;,&quot;+2.00&quot;,&quot;4,051&quot;,
+&quot;110/07/13&quot;,&quot;4,193,971&quot;,&quot;2,471,442,578&quot;,&quot;595.00&quot;,&quot;598.00&quot;,&quot;580.00&quot;,&quot;581.00&quot;,&quot;-5.00&quot;,&quot;4,805&quot;,
+&quot;110/07/14&quot;,&quot;3,227,097&quot;,&quot;1,879,124,931&quot;,&quot;587.00&quot;,&quot;588.00&quot;,&quot;576.00&quot;,&quot;583.00&quot;,&quot;+2.00&quot;,&quot;3,850&quot;,
+&quot;110/07/15&quot;,&quot;3,829,502&quot;,&quot;2,248,241,365&quot;,&quot;587.00&quot;,&quot;595.00&quot;,&quot;582.00&quot;,&quot;586.00&quot;,&quot;+3.00&quot;,&quot;3,845&quot;,
+&quot;110/07/16&quot;,&quot;3,187,440&quot;,&quot;1,843,681,038&quot;,&quot;579.00&quot;,&quot;582.00&quot;,&quot;575.00&quot;,&quot;578.00&quot;,&quot;-8.00&quot;,&quot;4,211&quot;,
+&quot;110/07/19&quot;,&quot;5,098,299&quot;,&quot;2,938,259,049&quot;,&quot;575.00&quot;,&quot;587.00&quot;,&quot;566.00&quot;,&quot;583.00&quot;,&quot;+5.00&quot;,&quot;5,722&quot;,
+&quot;110/07/20&quot;,&quot;4,357,647&quot;,&quot;2,487,141,638&quot;,&quot;578.00&quot;,&quot;580.00&quot;,&quot;565.00&quot;,&quot;568.00&quot;,&quot;-15.00&quot;,&quot;5,490&quot;,
+&quot;110/07/21&quot;,&quot;8,080,588&quot;,&quot;4,706,037,985&quot;,&quot;578.00&quot;,&quot;592.00&quot;,&quot;572.00&quot;,&quot;588.00&quot;,&quot;+20.00&quot;,&quot;8,300&quot;,
+&quot;110/07/22&quot;,&quot;7,087,325&quot;,&quot;4,232,823,802&quot;,&quot;598.00&quot;,&quot;604.00&quot;,&quot;591.00&quot;,&quot;591.00&quot;,&quot;+3.00&quot;,&quot;7,775&quot;,
+&quot;110/07/23&quot;,&quot;4,107,660&quot;,&quot;2,440,977,899&quot;,&quot;594.00&quot;,&quot;603.00&quot;,&quot;586.00&quot;,&quot;589.00&quot;,&quot;-2.00&quot;,&quot;4,396&quot;,
+&quot;110/07/26&quot;,&quot;7,524,346&quot;,&quot;4,458,291,251&quot;,&quot;595.00&quot;,&quot;600.00&quot;,&quot;580.00&quot;,&quot;600.00&quot;,&quot;+11.00&quot;,&quot;6,780&quot;,
+&quot;110/07/27&quot;,&quot;9,640,102&quot;,&quot;5,698,810,349&quot;,&quot;601.00&quot;,&quot;605.00&quot;,&quot;581.00&quot;,&quot;581.00&quot;,&quot;-19.00&quot;,&quot;9,561&quot;,
+&quot;110/07/28&quot;,&quot;7,246,457&quot;,&quot;4,124,712,070&quot;,&quot;580.00&quot;,&quot;590.00&quot;,&quot;555.00&quot;,&quot;565.00&quot;,&quot;-16.00&quot;,&quot;8,315&quot;,
+&quot;110/07/29&quot;,&quot;2,755,264&quot;,&quot;1,568,934,048&quot;,&quot;574.00&quot;,&quot;575.00&quot;,&quot;563.00&quot;,&quot;571.00&quot;,&quot;+6.00&quot;,&quot;3,153&quot;,
+&quot;110/07/30&quot;,&quot;4,375,186&quot;,&quot;2,476,179,781&quot;,&quot;568.00&quot;,&quot;575.00&quot;,&quot;560.00&quot;,&quot;560.00&quot;,&quot;-11.00&quot;,&quot;5,247&quot;,
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">csv_data</span><span class="p">))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>日期</th>
+      <th>成交股數</th>
+      <th>成交金額</th>
+      <th>開盤價</th>
+      <th>最高價</th>
+      <th>最低價</th>
+      <th>收盤價</th>
+      <th>漲跌價差</th>
+      <th>成交筆數</th>
+      <th>Unnamed: 9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>110/07/01</td>
+      <td>11,013,703</td>
+      <td>6,229,682,016</td>
+      <td>573.0</td>
+      <td>578.0</td>
+      <td>556.0</td>
+      <td>557.0</td>
+      <td>X0.00</td>
+      <td>11,146</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>110/07/02</td>
+      <td>4,274,819</td>
+      <td>2,367,941,193</td>
+      <td>560.0</td>
+      <td>561.0</td>
+      <td>545.0</td>
+      <td>556.0</td>
+      <td>-1.00</td>
+      <td>4,900</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>110/07/05</td>
+      <td>7,649,064</td>
+      <td>4,363,602,007</td>
+      <td>567.0</td>
+      <td>575.0</td>
+      <td>564.0</td>
+      <td>571.0</td>
+      <td>+15.00</td>
+      <td>7,904</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>110/07/06</td>
+      <td>13,287,003</td>
+      <td>7,821,063,948</td>
+      <td>579.0</td>
+      <td>599.0</td>
+      <td>578.0</td>
+      <td>597.0</td>
+      <td>+26.00</td>
+      <td>14,566</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>110/07/07</td>
+      <td>13,783,192</td>
+      <td>8,347,286,316</td>
+      <td>597.0</td>
+      <td>615.0</td>
+      <td>594.0</td>
+      <td>603.0</td>
+      <td>+6.00</td>
+      <td>14,684</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># method 1：lambda</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="mi">1911</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>日期</th>
+      <th>成交股數</th>
+      <th>成交金額</th>
+      <th>開盤價</th>
+      <th>最高價</th>
+      <th>最低價</th>
+      <th>收盤價</th>
+      <th>漲跌價差</th>
+      <th>成交筆數</th>
+      <th>Unnamed: 9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-07-01</td>
+      <td>11,013,703</td>
+      <td>6,229,682,016</td>
+      <td>573.0</td>
+      <td>578.0</td>
+      <td>556.0</td>
+      <td>557.0</td>
+      <td>X0.00</td>
+      <td>11,146</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-07-02</td>
+      <td>4,274,819</td>
+      <td>2,367,941,193</td>
+      <td>560.0</td>
+      <td>561.0</td>
+      <td>545.0</td>
+      <td>556.0</td>
+      <td>-1.00</td>
+      <td>4,900</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-07-05</td>
+      <td>7,649,064</td>
+      <td>4,363,602,007</td>
+      <td>567.0</td>
+      <td>575.0</td>
+      <td>564.0</td>
+      <td>571.0</td>
+      <td>+15.00</td>
+      <td>7,904</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-07-06</td>
+      <td>13,287,003</td>
+      <td>7,821,063,948</td>
+      <td>579.0</td>
+      <td>599.0</td>
+      <td>578.0</td>
+      <td>597.0</td>
+      <td>+26.00</td>
+      <td>14,566</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-07-07</td>
+      <td>13,783,192</td>
+      <td>8,347,286,316</td>
+      <td>597.0</td>
+      <td>615.0</td>
+      <td>594.0</td>
+      <td>603.0</td>
+      <td>+6.00</td>
+      <td>14,684</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># method 2：function</span>
+<span class="k">def</span> <span class="nf">convert_date</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="mi">1911</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">month</span> <span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">day</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">convert_date</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>日期</th>
+      <th>成交股數</th>
+      <th>成交金額</th>
+      <th>開盤價</th>
+      <th>最高價</th>
+      <th>最低價</th>
+      <th>收盤價</th>
+      <th>漲跌價差</th>
+      <th>成交筆數</th>
+      <th>Unnamed: 9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2113--0-01</td>
+      <td>11,013,703</td>
+      <td>6,229,682,016</td>
+      <td>573.0</td>
+      <td>578.0</td>
+      <td>556.0</td>
+      <td>557.0</td>
+      <td>X0.00</td>
+      <td>11,146</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2113--0-02</td>
+      <td>4,274,819</td>
+      <td>2,367,941,193</td>
+      <td>560.0</td>
+      <td>561.0</td>
+      <td>545.0</td>
+      <td>556.0</td>
+      <td>-1.00</td>
+      <td>4,900</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2113--0-05</td>
+      <td>7,649,064</td>
+      <td>4,363,602,007</td>
+      <td>567.0</td>
+      <td>575.0</td>
+      <td>564.0</td>
+      <td>571.0</td>
+      <td>+15.00</td>
+      <td>7,904</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2113--0-06</td>
+      <td>13,287,003</td>
+      <td>7,821,063,948</td>
+      <td>579.0</td>
+      <td>599.0</td>
+      <td>578.0</td>
+      <td>597.0</td>
+      <td>+26.00</td>
+      <td>14,566</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2113--0-07</td>
+      <td>13,783,192</td>
+      <td>8,347,286,316</td>
+      <td>597.0</td>
+      <td>615.0</td>
+      <td>594.0</td>
+      <td>603.0</td>
+      <td>+6.00</td>
+      <td>14,684</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 22 entries, 0 to 21
+Data columns (total 10 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   日期          22 non-null     object 
+ 1   成交股數        22 non-null     object 
+ 2   成交金額        22 non-null     object 
+ 3   開盤價         22 non-null     float64
+ 4   最高價         22 non-null     float64
+ 5   最低價         22 non-null     float64
+ 6   收盤價         22 non-null     float64
+ 7   漲跌價差        22 non-null     object 
+ 8   成交筆數        22 non-null     object 
+ 9   Unnamed: 9  0 non-null      float64
+dtypes: float64(5), object(5)
+memory usage: 1.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(self, timestr, default, ignoretz, tzinfos, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">655</span>             <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_naive</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">_build_naive</span><span class="nt">(self, res, default)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span> 
+<span class="ne">-&gt; </span><span class="mi">1241</span>         <span class="n">naive</span> <span class="o">=</span> <span class="n">default</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">**</span><span class="n">repl</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1242</span> 
+
+<span class="ne">ValueError</span>: month must be in 1..12
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ParserError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\tslibs\parsing.pyx</span> in <span class="ni">pandas._libs.tslibs.parsing.parse_datetime_string</span><span class="nt">()</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(timestr, parserinfo, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="k">return</span> <span class="n">DEFAULTPARSER</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">timestr</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span> 
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(self, timestr, default, ignoretz, tzinfos, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">657</span>             <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">ParserError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">timestr</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> 
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+
+<span class="ne">ParserError</span>: month must be in 1..12: 2113--0-01
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime</span><span class="nt">()</span>
+
+<span class="ne">TypeError</span>: invalid string coercion to datetime
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(self, timestr, default, ignoretz, tzinfos, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">655</span>             <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_naive</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">_build_naive</span><span class="nt">(self, res, default)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span> 
+<span class="ne">-&gt; </span><span class="mi">1241</span>         <span class="n">naive</span> <span class="o">=</span> <span class="n">default</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">**</span><span class="n">repl</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1242</span> 
+
+<span class="ne">ValueError</span>: month must be in 1..12
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ParserError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">f2f3c275f194</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\tools\datetimes.py</span> in <span class="ni">to_datetime</span><span class="nt">(arg, errors, dayfirst, yearfirst, utc, format, exact, unit, infer_datetime_format, origin, cache)</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">cache_array</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">805</span>             <span class="n">values</span> <span class="o">=</span> <span class="n">convert_listlike</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">_values</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_constructor</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">arg</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">arg</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span>     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="p">(</span><span class="n">ABCDataFrame</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">MutableMapping</span><span class="p">)):</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\tools\datetimes.py</span> in <span class="ni">_convert_listlike_datetimes</span><span class="nt">(arg, format, name, tz, unit, errors, infer_datetime_format, dayfirst, yearfirst, exact)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span>         <span class="k">assert</span> <span class="nb">format</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">infer_datetime_format</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>         <span class="n">utc</span> <span class="o">=</span> <span class="n">tz</span> <span class="o">==</span> <span class="s2">&quot;utc&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">465</span>         <span class="n">result</span><span class="p">,</span> <span class="n">tz_parsed</span> <span class="o">=</span> <span class="n">objects_to_datetime64ns</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">466</span>             <span class="n">arg</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">467</span>             <span class="n">dayfirst</span><span class="o">=</span><span class="n">dayfirst</span><span class="p">,</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\arrays\datetimes.py</span> in <span class="ni">objects_to_datetime64ns</span><span class="nt">(data, dayfirst, yearfirst, utc, errors, require_iso8601, allow_object)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2088</span>             <span class="k">return</span> <span class="n">values</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="s2">&quot;i8&quot;</span><span class="p">),</span> <span class="n">tz_parsed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2089</span>         <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2090</span>             <span class="k">raise</span> <span class="n">e</span>
+<span class="g g-Whitespace">   </span><span class="mi">2091</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2092</span>     <span class="k">if</span> <span class="n">tz_parsed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\arrays\datetimes.py</span> in <span class="ni">objects_to_datetime64ns</span><span class="nt">(data, dayfirst, yearfirst, utc, errors, require_iso8601, allow_object)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2073</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2074</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2075</span>         <span class="n">result</span><span class="p">,</span> <span class="n">tz_parsed</span> <span class="o">=</span> <span class="n">tslib</span><span class="o">.</span><span class="n">array_to_datetime</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2076</span>             <span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2077</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime_object</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\tslib.pyx</span> in <span class="ni">pandas._libs.tslib.array_to_datetime_object</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\tslibs\parsing.pyx</span> in <span class="ni">pandas._libs.tslibs.parsing.parse_datetime_string</span><span class="nt">()</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(timestr, parserinfo, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1372</span>         <span class="k">return</span> <span class="n">parser</span><span class="p">(</span><span class="n">parserinfo</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">timestr</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="k">return</span> <span class="n">DEFAULTPARSER</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">timestr</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1376</span> 
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\dateutil\parser\_parser.py</span> in <span class="ni">parse</span><span class="nt">(self, timestr, default, ignoretz, tzinfos, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>             <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_naive</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">657</span>             <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">ParserError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">timestr</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> 
+<span class="g g-Whitespace">    </span><span class="mi">659</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">ignoretz</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+
+<span class="ne">ParserError</span>: month must be in 1..12: 2113--0-01
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 14 entries, 0 to 13
+Data columns (total 10 columns):
+ #   Column      Non-Null Count  Dtype         
+---  ------      --------------  -----         
+ 0   日期          14 non-null     datetime64[ns]
+ 1   成交股數        14 non-null     object        
+ 2   成交金額        14 non-null     object        
+ 3   開盤價         14 non-null     float64       
+ 4   最高價         14 non-null     float64       
+ 5   最低價         14 non-null     float64       
+ 6   收盤價         14 non-null     float64       
+ 7   漲跌價差        14 non-null     float64       
+ 8   成交筆數        14 non-null     object        
+ 9   Unnamed: 9  0 non-null      float64       
+dtypes: datetime64[ns](1), float64(6), object(3)
+memory usage: 1.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 刪除無用的欄位</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 23 entries, 0 to 22
+Data columns (total 9 columns):
+日期      23 non-null object
+成交股數    23 non-null object
+成交金額    23 non-null object
+開盤價     23 non-null float64
+最高價     23 non-null float64
+最低價     23 non-null float64
+收盤價     23 non-null float64
+漲跌價差    23 non-null float64
+成交筆數    23 non-null object
+dtypes: float64(5), object(4)
+memory usage: 1.7+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 將以下欄位轉為數值</span>
+<span class="n">numeric_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;成交股數&#39;</span><span class="p">,</span><span class="s1">&#39;成交金額&#39;</span><span class="p">,</span><span class="s1">&#39;成交筆數&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numeric_columns</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 23 entries, 0 to 22
+Data columns (total 9 columns):
+日期      23 non-null object
+成交股數    23 non-null int64
+成交金額    23 non-null int64
+開盤價     23 non-null float64
+最高價     23 non-null float64
+最低價     23 non-null float64
+收盤價     23 non-null float64
+漲跌價差    23 non-null float64
+成交筆數    23 non-null int64
+dtypes: float64(5), int64(3), object(1)
+memory usage: 1.7+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;個股日成交資訊.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;個股日成交資訊.xlsx&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Content with notebooks</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="0_%E7%88%AC%E8%9F%B2_%E6%8A%93%E5%9C%96%E7%89%87.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">爬蟲解析，使用 Regular Expression</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By niki chen<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
