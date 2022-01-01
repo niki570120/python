@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; niki&#39;s home</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">niki's home</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="0_%E7%88%AC%E8%9F%B2_%E6%8A%93%E5%9C%96%E7%89%87.html">
+   爬蟲解析，使用 Regular Expression
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/20210828test1-checkpoint.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F20210828test1-checkpoint.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/20210828test1-checkpoint.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 引進相關套件</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 資料日期</span>
+<span class="n">date1</span> <span class="o">=</span> <span class="s1">&#39;20210720&#39;</span>
+<span class="n">stockNo</span> <span class="o">=</span> <span class="s1">&#39;2330&#39;</span>
+<span class="c1"># 網址</span>
+<span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=csv&amp;date=</span><span class="si">{}</span><span class="s1">&amp;stockNo=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date1</span><span class="p">,</span> <span class="n">stockNo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_data</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="n">fields</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&quot;,&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;=&#39;</span><span class="p">:</span>
+        <span class="n">clean_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+<span class="n">csv_data</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">csv_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;日期&quot;,&quot;成交股數&quot;,&quot;成交金額&quot;,&quot;開盤價&quot;,&quot;最高價&quot;,&quot;最低價&quot;,&quot;收盤價&quot;,&quot;漲跌價差&quot;,&quot;成交筆數&quot;,
+&quot;110/07/01&quot;,&quot;18,719,706&quot;,&quot;11,116,195,742&quot;,&quot;596.00&quot;,&quot;597.00&quot;,&quot;591.00&quot;,&quot;593.00&quot;,&quot;-2.00&quot;,&quot;20,565&quot;,
+&quot;110/07/02&quot;,&quot;19,633,718&quot;,&quot;11,562,140,245&quot;,&quot;590.00&quot;,&quot;593.00&quot;,&quot;587.00&quot;,&quot;588.00&quot;,&quot;-5.00&quot;,&quot;24,056&quot;,
+&quot;110/07/05&quot;,&quot;30,274,105&quot;,&quot;17,957,255,325&quot;,&quot;588.00&quot;,&quot;597.00&quot;,&quot;588.00&quot;,&quot;591.00&quot;,&quot;+3.00&quot;,&quot;21,836&quot;,
+&quot;110/07/06&quot;,&quot;13,830,591&quot;,&quot;8,185,167,307&quot;,&quot;595.00&quot;,&quot;596.00&quot;,&quot;589.00&quot;,&quot;592.00&quot;,&quot;+1.00&quot;,&quot;15,751&quot;,
+&quot;110/07/07&quot;,&quot;17,329,148&quot;,&quot;10,250,342,169&quot;,&quot;590.00&quot;,&quot;594.00&quot;,&quot;588.00&quot;,&quot;594.00&quot;,&quot;+2.00&quot;,&quot;18,023&quot;,
+&quot;110/07/08&quot;,&quot;21,596,183&quot;,&quot;12,733,045,117&quot;,&quot;595.00&quot;,&quot;595.00&quot;,&quot;588.00&quot;,&quot;588.00&quot;,&quot;-6.00&quot;,&quot;23,352&quot;,
+&quot;110/07/09&quot;,&quot;30,602,492&quot;,&quot;17,821,338,170&quot;,&quot;582.00&quot;,&quot;585.00&quot;,&quot;580.00&quot;,&quot;584.00&quot;,&quot;-4.00&quot;,&quot;51,232&quot;,
+&quot;110/07/12&quot;,&quot;33,011,596&quot;,&quot;19,612,592,644&quot;,&quot;595.00&quot;,&quot;597.00&quot;,&quot;590.00&quot;,&quot;593.00&quot;,&quot;+9.00&quot;,&quot;28,636&quot;,
+&quot;110/07/13&quot;,&quot;54,894,335&quot;,&quot;33,158,730,436&quot;,&quot;600.00&quot;,&quot;608.00&quot;,&quot;599.00&quot;,&quot;607.00&quot;,&quot;+14.00&quot;,&quot;60,121&quot;,
+&quot;110/07/14&quot;,&quot;39,670,241&quot;,&quot;24,276,719,505&quot;,&quot;613.00&quot;,&quot;615.00&quot;,&quot;608.00&quot;,&quot;613.00&quot;,&quot;+6.00&quot;,&quot;43,173&quot;,
+&quot;110/07/15&quot;,&quot;23,057,868&quot;,&quot;14,117,908,308&quot;,&quot;613.00&quot;,&quot;614.00&quot;,&quot;608.00&quot;,&quot;614.00&quot;,&quot;+1.00&quot;,&quot;29,913&quot;,
+&quot;110/07/16&quot;,&quot;61,882,128&quot;,&quot;36,562,482,701&quot;,&quot;591.00&quot;,&quot;595.00&quot;,&quot;588.00&quot;,&quot;589.00&quot;,&quot;-25.00&quot;,&quot;86,192&quot;,
+&quot;110/07/19&quot;,&quot;43,248,966&quot;,&quot;25,135,531,384&quot;,&quot;583.00&quot;,&quot;584.00&quot;,&quot;578.00&quot;,&quot;582.00&quot;,&quot;-7.00&quot;,&quot;86,753&quot;,
+&quot;110/07/20&quot;,&quot;16,352,855&quot;,&quot;9,502,338,666&quot;,&quot;579.00&quot;,&quot;584.00&quot;,&quot;579.00&quot;,&quot;581.00&quot;,&quot;-1.00&quot;,&quot;27,956&quot;,
+&quot;110/07/21&quot;,&quot;26,476,215&quot;,&quot;15,440,430,690&quot;,&quot;586.00&quot;,&quot;586.00&quot;,&quot;580.00&quot;,&quot;585.00&quot;,&quot;+4.00&quot;,&quot;32,757&quot;,
+&quot;110/07/22&quot;,&quot;27,075,950&quot;,&quot;16,014,166,571&quot;,&quot;589.00&quot;,&quot;594.00&quot;,&quot;587.00&quot;,&quot;591.00&quot;,&quot;+6.00&quot;,&quot;23,365&quot;,
+&quot;110/07/23&quot;,&quot;15,705,191&quot;,&quot;9,206,201,715&quot;,&quot;592.00&quot;,&quot;592.00&quot;,&quot;583.00&quot;,&quot;585.00&quot;,&quot;-6.00&quot;,&quot;23,635&quot;,
+&quot;110/07/26&quot;,&quot;22,442,745&quot;,&quot;13,089,591,086&quot;,&quot;591.00&quot;,&quot;591.00&quot;,&quot;580.00&quot;,&quot;580.00&quot;,&quot;-5.00&quot;,&quot;37,826&quot;,
+&quot;110/07/27&quot;,&quot;18,925,325&quot;,&quot;10,997,959,654&quot;,&quot;581.00&quot;,&quot;584.00&quot;,&quot;580.00&quot;,&quot;580.00&quot;,&quot;0.00&quot;,&quot;20,197&quot;,
+&quot;110/07/28&quot;,&quot;39,744,486&quot;,&quot;22,884,618,824&quot;,&quot;576.00&quot;,&quot;579.00&quot;,&quot;573.00&quot;,&quot;579.00&quot;,&quot;-1.00&quot;,&quot;75,078&quot;,
+&quot;110/07/29&quot;,&quot;25,014,772&quot;,&quot;14,525,643,464&quot;,&quot;585.00&quot;,&quot;585.00&quot;,&quot;577.00&quot;,&quot;583.00&quot;,&quot;+4.00&quot;,&quot;26,868&quot;,
+&quot;110/07/30&quot;,&quot;26,141,286&quot;,&quot;15,170,421,873&quot;,&quot;581.00&quot;,&quot;582.00&quot;,&quot;578.00&quot;,&quot;580.00&quot;,&quot;-3.00&quot;,&quot;16,353&quot;,
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">csv_data</span><span class="p">))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>日期</th>
+      <th>成交股數</th>
+      <th>成交金額</th>
+      <th>開盤價</th>
+      <th>最高價</th>
+      <th>最低價</th>
+      <th>收盤價</th>
+      <th>漲跌價差</th>
+      <th>成交筆數</th>
+      <th>Unnamed: 9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>110/07/01</td>
+      <td>18,719,706</td>
+      <td>11,116,195,742</td>
+      <td>596.0</td>
+      <td>597.0</td>
+      <td>591.0</td>
+      <td>593.0</td>
+      <td>-2.0</td>
+      <td>20,565</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>110/07/02</td>
+      <td>19,633,718</td>
+      <td>11,562,140,245</td>
+      <td>590.0</td>
+      <td>593.0</td>
+      <td>587.0</td>
+      <td>588.0</td>
+      <td>-5.0</td>
+      <td>24,056</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>110/07/05</td>
+      <td>30,274,105</td>
+      <td>17,957,255,325</td>
+      <td>588.0</td>
+      <td>597.0</td>
+      <td>588.0</td>
+      <td>591.0</td>
+      <td>3.0</td>
+      <td>21,836</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>110/07/06</td>
+      <td>13,830,591</td>
+      <td>8,185,167,307</td>
+      <td>595.0</td>
+      <td>596.0</td>
+      <td>589.0</td>
+      <td>592.0</td>
+      <td>1.0</td>
+      <td>15,751</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>110/07/07</td>
+      <td>17,329,148</td>
+      <td>10,250,342,169</td>
+      <td>590.0</td>
+      <td>594.0</td>
+      <td>588.0</td>
+      <td>594.0</td>
+      <td>2.0</td>
+      <td>18,023</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>110/07/08</td>
+      <td>21,596,183</td>
+      <td>12,733,045,117</td>
+      <td>595.0</td>
+      <td>595.0</td>
+      <td>588.0</td>
+      <td>588.0</td>
+      <td>-6.0</td>
+      <td>23,352</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>110/07/09</td>
+      <td>30,602,492</td>
+      <td>17,821,338,170</td>
+      <td>582.0</td>
+      <td>585.0</td>
+      <td>580.0</td>
+      <td>584.0</td>
+      <td>-4.0</td>
+      <td>51,232</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>110/07/12</td>
+      <td>33,011,596</td>
+      <td>19,612,592,644</td>
+      <td>595.0</td>
+      <td>597.0</td>
+      <td>590.0</td>
+      <td>593.0</td>
+      <td>9.0</td>
+      <td>28,636</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>110/07/13</td>
+      <td>54,894,335</td>
+      <td>33,158,730,436</td>
+      <td>600.0</td>
+      <td>608.0</td>
+      <td>599.0</td>
+      <td>607.0</td>
+      <td>14.0</td>
+      <td>60,121</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>110/07/14</td>
+      <td>39,670,241</td>
+      <td>24,276,719,505</td>
+      <td>613.0</td>
+      <td>615.0</td>
+      <td>608.0</td>
+      <td>613.0</td>
+      <td>6.0</td>
+      <td>43,173</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>110/07/15</td>
+      <td>23,057,868</td>
+      <td>14,117,908,308</td>
+      <td>613.0</td>
+      <td>614.0</td>
+      <td>608.0</td>
+      <td>614.0</td>
+      <td>1.0</td>
+      <td>29,913</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>110/07/16</td>
+      <td>61,882,128</td>
+      <td>36,562,482,701</td>
+      <td>591.0</td>
+      <td>595.0</td>
+      <td>588.0</td>
+      <td>589.0</td>
+      <td>-25.0</td>
+      <td>86,192</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>110/07/19</td>
+      <td>43,248,966</td>
+      <td>25,135,531,384</td>
+      <td>583.0</td>
+      <td>584.0</td>
+      <td>578.0</td>
+      <td>582.0</td>
+      <td>-7.0</td>
+      <td>86,753</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>110/07/20</td>
+      <td>16,352,855</td>
+      <td>9,502,338,666</td>
+      <td>579.0</td>
+      <td>584.0</td>
+      <td>579.0</td>
+      <td>581.0</td>
+      <td>-1.0</td>
+      <td>27,956</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>110/07/21</td>
+      <td>26,476,215</td>
+      <td>15,440,430,690</td>
+      <td>586.0</td>
+      <td>586.0</td>
+      <td>580.0</td>
+      <td>585.0</td>
+      <td>4.0</td>
+      <td>32,757</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>110/07/22</td>
+      <td>27,075,950</td>
+      <td>16,014,166,571</td>
+      <td>589.0</td>
+      <td>594.0</td>
+      <td>587.0</td>
+      <td>591.0</td>
+      <td>6.0</td>
+      <td>23,365</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>110/07/23</td>
+      <td>15,705,191</td>
+      <td>9,206,201,715</td>
+      <td>592.0</td>
+      <td>592.0</td>
+      <td>583.0</td>
+      <td>585.0</td>
+      <td>-6.0</td>
+      <td>23,635</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>110/07/26</td>
+      <td>22,442,745</td>
+      <td>13,089,591,086</td>
+      <td>591.0</td>
+      <td>591.0</td>
+      <td>580.0</td>
+      <td>580.0</td>
+      <td>-5.0</td>
+      <td>37,826</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>110/07/27</td>
+      <td>18,925,325</td>
+      <td>10,997,959,654</td>
+      <td>581.0</td>
+      <td>584.0</td>
+      <td>580.0</td>
+      <td>580.0</td>
+      <td>0.0</td>
+      <td>20,197</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>110/07/28</td>
+      <td>39,744,486</td>
+      <td>22,884,618,824</td>
+      <td>576.0</td>
+      <td>579.0</td>
+      <td>573.0</td>
+      <td>579.0</td>
+      <td>-1.0</td>
+      <td>75,078</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>110/07/29</td>
+      <td>25,014,772</td>
+      <td>14,525,643,464</td>
+      <td>585.0</td>
+      <td>585.0</td>
+      <td>577.0</td>
+      <td>583.0</td>
+      <td>4.0</td>
+      <td>26,868</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>110/07/30</td>
+      <td>26,141,286</td>
+      <td>15,170,421,873</td>
+      <td>581.0</td>
+      <td>582.0</td>
+      <td>578.0</td>
+      <td>580.0</td>
+      <td>-3.0</td>
+      <td>16,353</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;日期&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="mi">1911</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>日期</th>
+      <th>成交股數</th>
+      <th>成交金額</th>
+      <th>開盤價</th>
+      <th>最高價</th>
+      <th>最低價</th>
+      <th>收盤價</th>
+      <th>漲跌價差</th>
+      <th>成交筆數</th>
+      <th>Unnamed: 9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-07-01</td>
+      <td>18,719,706</td>
+      <td>11,116,195,742</td>
+      <td>596.0</td>
+      <td>597.0</td>
+      <td>591.0</td>
+      <td>593.0</td>
+      <td>-2.0</td>
+      <td>20,565</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-07-02</td>
+      <td>19,633,718</td>
+      <td>11,562,140,245</td>
+      <td>590.0</td>
+      <td>593.0</td>
+      <td>587.0</td>
+      <td>588.0</td>
+      <td>-5.0</td>
+      <td>24,056</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-07-05</td>
+      <td>30,274,105</td>
+      <td>17,957,255,325</td>
+      <td>588.0</td>
+      <td>597.0</td>
+      <td>588.0</td>
+      <td>591.0</td>
+      <td>3.0</td>
+      <td>21,836</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-07-06</td>
+      <td>13,830,591</td>
+      <td>8,185,167,307</td>
+      <td>595.0</td>
+      <td>596.0</td>
+      <td>589.0</td>
+      <td>592.0</td>
+      <td>1.0</td>
+      <td>15,751</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-07-07</td>
+      <td>17,329,148</td>
+      <td>10,250,342,169</td>
+      <td>590.0</td>
+      <td>594.0</td>
+      <td>588.0</td>
+      <td>594.0</td>
+      <td>2.0</td>
+      <td>18,023</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.seasonal</span> <span class="kn">import</span> <span class="n">seasonal_decompose</span>
+<span class="kn">from</span> <span class="nn">dateutil.parser</span> <span class="kn">import</span> <span class="n">parse</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Import Data 時間序列</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">((</span><span class="n">StringIO</span><span class="p">(</span><span class="n">csv_data</span><span class="p">))</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">日期</span><span class="p">([</span><span class="n">parse</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-01&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Decompose </span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">seasonal_decompose</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;multiplicative&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)})</span>
+<span class="n">result</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Time Series Decomposition of Air Passengers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-7-fb4fd14d744f&gt;&quot;</span><span class="gt">, line </span><span class="mi">8</span>
+    <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">日期</span><span class="p">([</span><span class="n">parse</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-01&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]])</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By niki chen<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
